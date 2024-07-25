@@ -1,0 +1,263 @@
+﻿* {
+  padding: 0;
+  margin: 0;
+  
+  font-family: Arial;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  background-color: #00ff00;
+}
+
+.sleep {
+  background-color: black;
+}
+
+#unity-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+}
+
+#unity-loading-bar {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  width: 40%;
+  height: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#unity-progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1%;
+  height: 100%;
+  background-color: #7bccff;
+  border-radius: 10px;
+  transition: 400ms linear;
+}
+
+.hidden {
+  display: none !important;
+}
+
+textarea {
+  display: block;
+  overflow: hidden;
+  padding: 10px;
+  width: -webkit-fill-available;
+  width: 90%;
+  font-size: 14px;
+  margin: 25px;
+  border-radius: 6px;
+  bottom: 0;
+  position: fixed;
+  resize: vertical;
+  max-height: 40%;
+  min-height: 10%;
+  pointer-events: all;
+}
+
+textarea:focus {
+  outline: 3px solid #a6d8e2;
+  transition: outline 0.3s ease-in-out;
+}
+
+.valid {
+  outline: 2px solid #00ff00;
+}
+
+.invalid {
+  outline: 2px solid #ff0000;
+}
+
+#txtApiKey {
+  width: 80%;
+  outline-style: ridge;
+}
+
+#api-key {
+  margin: 25px;
+  background-color: #badef2ce;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 25px;
+  
+  opacity: 0;
+}
+
+#api-key label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#api-key input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#api-key p {
+  font-size: 0.9em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#api-key small {
+  opacity: 0.8;
+  font-size: 0.8em;
+}
+
+#api-key button {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3973b8;
+  color: white;
+  cursor: pointer;
+  left: 25%;
+  position: relative;
+  margin: 15px;
+}
+
+/* Disabled button: */
+#api-key button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Only hover when not disabled: */
+#api-key button:not([disabled]):hover {
+  background-color: #2a5386;
+}
+
+#api-key #error-message {
+  color: red;
+}
+
+#api-key #success-message {
+  color: green;
+}
+
+#api-key.visible {
+  opacity: 1;
+}
+
+#clouds-svg {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  opacity: 1;
+}
+
+.fader {
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.finished {
+  opacity: 0 !important;
+}
+
+.fade-in {
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 2.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { 
+    opacity: 0; 
+    display: hidden;
+  }
+}
+
+#title-header {
+  top: 20%;
+  font-size: xxx-large;
+  color: black;
+  opacity: 65%;
+  text-shadow: 2px 2px 2px rgb(0 0 0 / 40%);
+}
+
+#unity-loading-status {
+  top: 25px;
+  font-family: Arial;
+  font-size: large;
+  opacity: 65%;
+}
+
+#unity-loading-percent {
+  top: 1px;
+  font-family: Arial;
+  font-size: small;
+  opacity: 65%;
+}
+
+.absolute-center {
+  position: absolute;
+  left: 30%;
+  width: 40%;
+}
+
+.underlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+
+  background: rgb(10,60,99);
+  background: -moz-linear-gradient(25deg, rgba(10,60,99,1) 0%, rgba(57,115,184,1) 35%, rgba(186,222,242,1) 100%);
+  background: -webkit-linear-gradient(25deg, rgba(10,60,99,1) 0%, rgba(57,115,184,1) 35%, rgba(186,222,242,1) 100%);
+  background: linear-gradient(25deg, rgba(10,60,99,1) 0%, rgba(57,115,184,1) 35%, rgba(186,222,242,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a3c63",endColorstr="#badef2",GradientType=1);
+
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
+}
+
+.black {
+  background: black;
+  z-index: -2;
+}
+
+.ftb {
+  opacity: 0;
+}

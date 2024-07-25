@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block;"  preserveAspectRatio="xMidYMid">
+	<defs>
+		<path id="cloudPath" d="M84.717,33.597c0.791-2.503,1.186-5.138,1.186-7.773C85.903,11.594,74.308,0,60.079,0 c-9.881,0-18.445,5.534-22.793,13.702c-1.581-0.527-3.426-0.791-5.138-0.791c-9.486,0-17.128,7.642-17.128,17.128 c0,1.186,0.132,2.372,0.395,3.426C6.719,34.783,0,42.424,0,51.515C0,61.66,8.169,69.829,18.314,69.829h63.373 C91.831,69.829,100,61.66,100,51.515C99.868,42.556,93.281,35.046,84.717,33.597z"></path>
+	</defs>	
+	<g transform="translate(525,399.5) translate(-525,-399.5)">
+		<g transform="translate(-200 720)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 720;1800 720" dur="66s" repeatCount="indefinite" begin="-37.7s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#1b75be" transform="scale(0.5)"></use>
+		</g>
+		<g transform="translate(-200 224)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 224;1800 224" dur="66s" repeatCount="indefinite" begin="-14.4s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#1b75be" transform="scale(0.5)"></use>
+		</g>
+		<g transform="translate(-200 188)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 188;1800 188" dur="66s" repeatCount="indefinite" begin="-50.3s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#1b75be" transform="scale(0.5)"></use>
+		</g>
+		<g transform="translate(-200 750)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 750;1800 750" dur="66s" repeatCount="indefinite" begin="-2.3s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#1b75be" transform="scale(0.5)"></use>
+		</g>
+		<g transform="translate(-200 653)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 653;1800 653" dur="66s" repeatCount="indefinite" begin="-61.s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#1b75be" transform="scale(0.5)"></use>
+		</g>
+		<g transform="translate(-200 189)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 189;1800 189" dur="66s" repeatCount="indefinite" begin="-3.188s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#1b75be" transform="scale(0.5)"></use>
+		</g>
+		<g transform="translate(-200 657)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 657;1800 657" dur="33s" repeatCount="indefinite" begin="-12.52s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#408ee0" transform="scale(1)"></use>
+		</g>
+		<g transform="translate(-200 522)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 522;1800 522" dur="33s" repeatCount="indefinite" begin="-12.56s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#408ee0" transform="scale(1)"></use>
+		</g>
+		<g transform="translate(-200 428)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 428;1800 428" dur="33s" repeatCount="indefinite" begin="-40.36s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#408ee0" transform="scale(1)"></use>
+		</g>
+		<g transform="translate(-200 527)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 527;1800 527" dur="33s" repeatCount="indefinite" begin="-50.2s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#408ee0" transform="scale(1)"></use>
+		</g>
+		<g transform="translate(-200 288)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 288;1800 288" dur="33s" repeatCount="indefinite" begin="-52.7s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#408ee0" transform="scale(1)"></use>
+		</g>
+		<g transform="translate(-200 462)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 462;1800 462" dur="33s" repeatCount="indefinite" begin="-0.636s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#408ee0" transform="scale(1)"></use>
+		</g>
+		<g transform="translate(-200 448)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 448;1800 448" dur="33s" repeatCount="indefinite" begin="-21.5s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#408ee0" transform="scale(1)"></use>
+		</g>
+		<g transform="translate(-200 731)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 731;1800 731" dur="44s" repeatCount="indefinite" begin="-38.0s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#89bff8" transform="scale(1.5)"></use>
+		</g>
+		<g transform="translate(-200 274)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 274;1800 274" dur="44s" repeatCount="indefinite" begin="-31.93s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#89bff8" transform="scale(1.5)"></use>
+		</g>
+		<g transform="translate(-200 210)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 210;1800 210" dur="44s" repeatCount="indefinite" begin="-61.42s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#89bff8" transform="scale(1.5)"></use>
+		</g>
+		<g transform="translate(-200 575)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 575;1800 575" dur="44s" repeatCount="indefinite" begin="-18.6s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#89bff8" transform="scale(1.5)"></use>
+		</g>
+		<g transform="translate(-200 627)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 627;1800 627" dur="44s" repeatCount="indefinite" begin="-27.8s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#89bff8" transform="scale(1.5)"></use>
+		</g>
+		<g transform="translate(-200 694)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 694;1800 694" dur="44s" repeatCount="indefinite" begin="-23.0s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#89bff8" transform="scale(1.5)"></use>
+		</g>
+		<g transform="translate(-200 720)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 720;1800 720" dur="30s" repeatCount="indefinite" begin="-5.02s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#e3fbff" transform="scale(2)"></use>
+		</g>
+		<g transform="translate(-200 224)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 224;1800 224" dur="30s" repeatCount="indefinite" begin="-48.6s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#e3fbff" transform="scale(2)"></use>
+		</g>
+		<g transform="translate(-200 0)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 0;1800 0" dur="30s" repeatCount="indefinite" begin="-26.46s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#e3fbff" transform="scale(2)"></use>
+		</g>
+		<g transform="translate(-200 786)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 786;1800 786" dur="30s" repeatCount="indefinite" begin="-33.8s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#e3fbff" transform="scale(2)"></use>
+		</g>
+		<g transform="translate(-200 465)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 465;1800 465" dur="30s" repeatCount="indefinite" begin="-22.30s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#e3fbff" transform="scale(2)"></use>
+		</g>
+		<g transform="translate(-200 378)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 378;1800 378" dur="30s" repeatCount="indefinite" begin="-53.23s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#e3fbff" transform="scale(2)"></use>
+		</g>
+		<g transform="translate(-200 49)">
+			<animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-200 49;1800 49" dur="30s" repeatCount="indefinite" begin="-24.04s"></animateTransform>
+			<use xlink:href="#cloudPath" fill="#e3fbff" transform="scale(2)"></use>
+		</g>
+	</g>
+</svg>

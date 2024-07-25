@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>{{{ PRODUCT_NAME }}}</title>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./Styles/styles.css">
+		<link rel="stylesheet" href="./Styles/chat.css">
+		<link rel="stylesheet" href="./Styles/controls.css">
+	</head>
+
+	<body oncontextmenu="return false">
+		<!-- Main canvas -->
+		<canvas id="unity-canvas"></canvas>
+
+		<div class="underlay black"></div>
+		<div class="underlay gradient">
+			<h1 id="title-header" class="absolute-center">Dialogue Dreamland</h1>
+		</div>
+
+		<!-- Loading bar -->
+		<div id="unity-loading-bar" class="fader">
+			<div id="unity-progress-bar"></div>
+			<small id="unity-loading-percent" class="absolute-center"></small>
+			<p id="unity-loading-status" class="absolute-center">Loading</p>
+		</div>
+
+		<!-- API Key -->
+		<div id="api-key">
+			<label for="txtApiKey">Enter your ChatGPT API Key:</label><br>
+			<input id="txtApiKey" placeholder="sk-" type="password" maxlength="53" autofocus>
+			<p>Your API key brings Dialogue Dreamland's NPCs to life, creating immersive dialogues and unique experiences. Don't have an API key yet? Get one from <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI's API key page</a>.</p>
+			<button disabled id="btnApiKey">Start Adventure</button>
+			<small>Please note, your API key is confidential and will only be used to facilitate in-game interactions.</small>
+		</div>
+
+		<!-- Clouds SVG FX -->
+		<div id="img-container">
+			<img id="clouds-svg" class="fader fade-in" src="./Assets/clouds.svg" alt="Clouds Image">	
+		</div>
+
+		<!-- Chat UI -->
+		<div id="unity-chat">
+		 	<div id="chat-messages"></div>
+			<textarea id="txtChat" class='autoExpand' rows='3' data-min-rows='3' placeholder='Type here to chat...' autofocus></textarea>
+		</div>
+
+		<!-- Controls -->
+		<div id="camera-rotation-reminder" class="hidden">
+			<p>Rotate the camera with <kbd>Right Click</kbd></p>
+		</div>
+		<div id="controls-reminder" class="hidden">
+			<p>Move around with <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></p>
+		</div>	
+
+		<!-- Scripts -->
+		<script src="Build/{{{ LOADER_FILENAME }}}"></script>
+		<script src="./JS/api-key.js"></script>
+		<script src="./JS/unity-io.js"></script>
+		<script src="./JS/unity-chat-ui.js"></script>
+		<script src="./JS/text-area.js"></script>
+		<script>
+			var config = {
+				dataUrl: "Build/{{{ DATA_FILENAME }}}",
+				frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+				codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+				memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+				symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+				streamingAssetsUrl: "StreamingAssets",
+				companyName: "{{{ COMPANY_NAME }}}",
+				productName: "{{{ PRODUCT_NAME }}}",
+				productVersion: "{{{ PRODUCT_VERSION }}}",
+			}
+			var buildUrl = "Build";
+			var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+
+			var canvas = document.querySelector("#unity-canvas");
+			var loadingBar = document.querySelector("#unity-loading-bar");
+			var progressBar = document.querySelector("#unity-progress-bar");
+			var loadingPercent = document.querySelector("#unity-loading-percent");
+			var script = document.createElement("script");
+			
+			// Load build js script
+			script.src = loaderUrl;
+			script.onload = function () {
+				// Create Unity instance
+				createUnityInstance(canvas, config, function (progress) {
+					progressBar.style.width = 100 * progress + "%";
+					loadingPercent.innerText = Math.floor(1000 * progress) / 10 + "%";
+				})
+				.then(function (unityInstance) { 
+					// Store instance and hide loader
+					document.unityInstance = unityInstance;
+					loadingBar.style.display = "none"; 
+
+					const underlay = document.querySelector(".underlay.gradient");
+					underlay.classList.add("ftb");
+					
+					var clouds = document.getElementById("clouds-svg");
+					clouds.classList.remove("fade-in");
+					clouds.classList.add("fade-out");
+					
+					// wait for unity splash screen to finish, then add class to clouds svg
+					setTimeout(function() {
+						// destroy underlay-gradient html element
+						underlay.remove();
+
+						const underlayBlack = document.querySelector(".black");
+						underlayBlack.classList.add("finished");
+
+						const keyUI = document.getElementById("api-key");
+						keyUI.classList.add("visible");
+						keyUI.classList.add("fader");
+
+						const rotationUI = document.getElementById("camera-rotation-reminder");
+						rotationUI.classList.remove('hidden');
+					}, 2500);
+				})
+				.catch(function (message) { alert(message); });
+			};
+			document.body.appendChild(script);
+		</script>
+	</body>
+</html>
